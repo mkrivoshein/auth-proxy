@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -65,11 +66,6 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
-.env
-.env.*
-!.env.example
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -81,6 +77,16 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+
+dist-ssr
+*.local
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
 
 # Gatsby files
 .cache/
@@ -137,3 +143,23 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Uploads
+uploads/
+*.csv
+!transactions.csv
+
+# Local run data (NocoDB database and data files)
+.run/
+!.run/.gitkeep
